@@ -1,6 +1,6 @@
 # min-ztso-litmus-tests
 
-This minimal testsuite is a adaptation of the tests found in this paper:
+This minimal testsuite is an adaptation of the tests found in this paper:
 https://www.cl.cam.ac.uk/~pes20/weakmemory/x86tso-paper.pdf
 
 This collection of litmus tests aims to provide coverage of the majority
@@ -9,12 +9,12 @@ coverage, please refer to the [RISC-V Litmus Tests repo](https://github.com/litm
 
 # Test creation
 Most tests were generated using diy7. Files in the /conf directory that
-end with -ext generate more than just the described test.
+end with -ext generates more than just the described test.
 
-Tests may have been edited from the generated file in order to better
+Tests may have been edited from the generated file to better
 match the exists() clause from the paper.
 
-Tests that were handwritten have a note at the top saying such.
+Handwritten tests have a note at the top saying such.
 
 If you want to run diy7 to generate the tests associated with a conf
 file, use a command like this:
