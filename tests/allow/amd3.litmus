@@ -1,0 +1,21 @@
+RISCV SB+coi-pos
+"Coi PodWR Fre Coi PodWR Fre"
+Cycle=Fre Coi PodWR Fre Coi PodWR
+Relax=PodWR
+Safe=Fre Coi
+Generator=diy7 (version 7.56)
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Coi PodWR Fre Coi PodWR Fre
+{
+0:x6=x; 0:x9=y;
+1:x6=y; 1:x9=x;
+}
+ P0          | P1          ;
+ ori x5,x0,1 | ori x5,x0,1 ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ ori x7,x0,2 | ori x7,x0,2 ;
+ sw x7,0(x6) | sw x7,0(x6) ;
+ lw x8,0(x9) | lw x8,0(x9) ;
+(* exist (x=2 /\ y=2 /\ 0:x8=0 /\ 1:x8=0) *)
+exists (0:x8=1 /\ 1:x8=1)
