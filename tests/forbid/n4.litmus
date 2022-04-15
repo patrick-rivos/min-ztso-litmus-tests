@@ -11,4 +11,4 @@ RISCV n4
  ori x5,x0,1 | ori x5,x0,2 ;
  sw x5,0(x6) | sw x5,0(x6) ;
  lw x7,0(x6) | lw x7,0(x6) ;
-~exists (0:x4=2 /\ 0:x7=1 /\ 1:x4=1 /\ 0:x7=2)
+~exists (0:x4=2 /\ 0:x7=1 /\ 1:x4=1 /\ 1:x7=2)
